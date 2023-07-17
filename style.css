@@ -66,11 +66,11 @@ input {
 }
 
 button.opo {
-    background: linear-gradient(#4b3763, #331f4d);
+    background: linear-gradient(rgb(107, 106, 106), grey);
 }
 
 button.opo:hover {
-    background: linear-gradient(#331f4d, #4b3763);
+    background: linear-gradient(grey, rgb(107, 106, 106));
 }
 
 button.eq {
