@@ -1,3 +1,4 @@
+// Busca as classes/IDs no HTML
 const display = document.querySelector(".display");
 const buttons = document.querySelectorAll("button");
 const specialChars = ["%", "*", "/", "-", "+"];
@@ -7,18 +8,20 @@ let output = "";
 const calculate = (btnValue) => {
   display.focus();
   if (btnValue === "=" && output !== "") {
-    output = eval(output.replace("%", "/100"));
+    return eval(output.replace("%", "/100"));
   } else if (btnValue === "AC") {
-    output = "";
+    return ""; // Se clicar em AC retorna uma string vazia
   } else if (btnValue === "DEL") {
-    output = output.toString().slice(0, -1);
+    return output.toString().slice(0, -1); // Se clicar em DEL retorna a string sem o último número
   } else {
     if (output === "" && specialChars.includes(btnValue)) return;
-    output += btnValue;
+    return output + btnValue; // Se clicar somente em um númeo o número permanece na tela
   }
-  display.value = output;
 };
 
 buttons.forEach((button) => {
-  button.addEventListener("click", (e) => calculate(e.target.dataset.value));
+  button.addEventListener("click", (e) => {
+    output = calculate(e.target.dataset.value);
+    display.value = output;
+  }); // Percorre todos botões e ao um deles ser clicado executa a função
 });

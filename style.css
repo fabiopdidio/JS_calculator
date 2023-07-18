@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap"); /* fonte importada do google fonts */
 
 * {
   margin: 0;
@@ -8,11 +8,11 @@
 }
 
 body {
-  height: 100vh;
+  height: 100vh; /* 100% da tela */
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(#fff, #ccc);
+  justify-content: center; /* Centraliza na tela */
+  background: linear-gradient(#fff, skyblue); /* Cor do fundo gradiente */
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
   border-radius: 12px;
   padding: 10px 20px 20px;
   background-color: black;
-  box-shadow: 0 5px 10px black;
+  box-shadow: 0 5px 10px black; /* Adiciona sombra à calculadora */
   outline: rgb(32, 32, 32) 10px solid;
 }
 .display {
@@ -30,7 +30,7 @@ body {
   width: 100%;
   outline: none;
   border: solid 0.3;
-  text-align: right;
+  text-align: right; /* Texto justificado à direita */
   margin: 50px 0;
   font-size: 40px;
   color: black;
@@ -48,7 +48,7 @@ input {
 }
 
 .button button {
-  padding: 10px;
+  padding: 10px; /* Define preenchimento do botão*/
   border-radius: 15px;
   border: none;
   font-size: 20px;
@@ -58,25 +58,34 @@ input {
 
 .button button:hover {
   transition: 0.5s;
-  background: linear-gradient(#9b9b9b, #e8e8e8);
+  background: linear-gradient(
+    #9b9b9b,
+    #e8e8e8
+  ); /* Inverte cores para destacar botão */
 }
 
 .button button:active {
-    transform: scale(0.99);
+  transform: scale(0.99);
 }
 
 button.opo {
-    background: linear-gradient(rgb(107, 106, 106), grey);
+  background: linear-gradient(rgb(80, 79, 79), grey);
 }
 
 button.opo:hover {
-    background: linear-gradient(grey, rgb(107, 106, 106));
+  background: linear-gradient(
+    grey,
+    rgb(80, 79, 79)
+  ); /* Inverte cores para destacar botão */
 }
 
 button.eq {
-    background: linear-gradient(#b06803, #a35603);
+  background: linear-gradient(#b06803, #a35603); /* Botão de igual */
 }
 
 button.eq:hover {
-    background: linear-gradient(#a35603, #b06803);
+  background: linear-gradient(
+    #a35603,
+    #b06803
+  ); /* Inverte cores para destacar botão */
 }
